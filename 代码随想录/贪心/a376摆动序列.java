@@ -1,4 +1,4 @@
-package 代码随想录.回溯.贪心;
+package 代码随想录.贪心;
 
 /**
  * @Author: ZJX

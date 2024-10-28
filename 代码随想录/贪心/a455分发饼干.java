@@ -1,10 +1,6 @@
-package 代码随想录.回溯.贪心;
+package 代码随想录.贪心;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * @Author: ZJX
