@@ -16,7 +16,7 @@ public class a279完全平方数 {
             for (int i = 1; i * i <= n; i++) {
                 int v = i * i;
                 for (int j = v; j <= n; j++) {
-                    f[j] = Math.max(f[i], f[j - v] + 1);
+                    f[j] = Math.min(f[j], f[j - v] + 1);
                 }
             }
             return f[n];
@@ -29,9 +29,8 @@ public class a279完全平方数 {
             Arrays.fill(f, n + 1);
             f[0] = 0;
             for (int i = 1; i <= n; i++) {
-                for (int j = 1; j * j <= i; j++) {
+                for (int j = 1; j * j <= i; j++)
                     f[i] = Math.min(f[i], f[i - j * j] + 1);
-                }
             }
             return f[n];
         }

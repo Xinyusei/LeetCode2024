@@ -1,6 +1,5 @@
 package 代码随想录.动态规划.背包问题.完全背包;
 
-import javax.naming.spi.NamingManager;
 import java.util.Arrays;
 
 /**
