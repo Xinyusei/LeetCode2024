@@ -1,4 +1,4 @@
-package Type_.动态规划.经典线性DP.最长公共子序列LCS;
+package 代码随想录.动态规划.子序列.LCS最长公共子序列;
 
 /**
  * <a href="https://leetcode.cn/problems/uncrossed-lines/">1035. 不相交的线</a>
