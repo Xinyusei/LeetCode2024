@@ -22,8 +22,11 @@ public class a239滑动窗口最大值 {
                     // 加入新元素
                     window.push(nums[i]);
                     f[i + 1 - k] = window.getMax();
+                    System.out.println(window.queue);
+                    //超出滑动窗口范围 - 移除当前元素但不一定在单调队列中删除其元素
                     window.pop(nums[i + 1 - k]);
                 }
+
             }
             return f;
         }
