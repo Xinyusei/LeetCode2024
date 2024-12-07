@@ -1,4 +1,4 @@
-package Type_.动态规划.网格图DP.基础;
+package Type_.动态规划.二_网格图DP.基础;
 
 /**
  * 64. 最小路径和

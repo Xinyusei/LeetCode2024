@@ -1,6 +1,5 @@
-package Type_.动态规划.网格图DP.基础;
+package Type_.动态规划.二_网格图DP.基础;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**

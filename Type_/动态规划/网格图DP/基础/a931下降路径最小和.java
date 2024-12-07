@@ -1,6 +1,4 @@
-package Type_.动态规划.网格图DP.基础;
-
-import java.util.Arrays;
+package Type_.动态规划.二_网格图DP.基础;
 
 /**
  * <a href="https://leetcode.cn/problems/minimum-falling-path-sum/">下降路径最小和</a>

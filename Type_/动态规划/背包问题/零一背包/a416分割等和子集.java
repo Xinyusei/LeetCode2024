@@ -1,6 +1,4 @@
-package Type_.动态规划.背包问题.Zero_One_Knapsack;
-
-import java.util.Arrays;
+package Type_.动态规划.背包问题.零一背包;
 
 /**
  * 416. 分割等和子集
