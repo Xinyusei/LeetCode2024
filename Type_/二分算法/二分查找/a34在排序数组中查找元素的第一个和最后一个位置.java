@@ -19,8 +19,10 @@ public class a34在排序数组中查找元素的第一个和最后一个位置 
                 int mid = ((hi - lo) >> 1) + lo;
                 //[lo, mid) mid (mid + 1,hi)
                 if (nums[mid] >= target)
+                    //范围缩小到 [lo,mid)
                     hi = mid;
                 else
+                    //范围缩小到 [mid+1,hi)
                     lo = mid + 1;
             }
             if (lo == nums.length || nums[lo] != target)
@@ -35,8 +37,10 @@ public class a34在排序数组中查找元素的第一个和最后一个位置 
                 int mid = (hi - lo) >> 1 + lo;
                 //[lo, mid) mid (mid + 1,hi)
                 if (nums[mid] <= target)
+                    //范围缩小到 [mid+1,hi)
                     lo = mid + 1;
                 else
+                    //范围缩小到[lo,mid)
                     hi = mid;
             }
             int idx = lo - 1;
