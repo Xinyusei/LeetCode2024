@@ -1,5 +1,10 @@
 package 面试150;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * @Author: ZJX
  * @Date: 2024/12/23
@@ -7,7 +12,7 @@ package 面试150;
  */
 public class a6Z字形变换 {
     /**
-     * 找规律
+     * 找规律 - 第一行 / 中间几行 / 最后一行
      */
     class S1 {
         class Solution {
@@ -44,6 +49,35 @@ public class a6Z字形变换 {
         }
     }
 
+    /**
+     * 更简单的规律 - 是 S1的压缩版,更直观
+     */
+    class S2 {
+
+        class Solution {
+            public String convert(String s, int numRows) {
+                if (numRows == 1 || s.length() <= numRows)
+                    return s;
+                List<StringBuilder> rows = new ArrayList<>();
+                for (int i = 0; i < numRows; i++) {
+                    rows.add(new StringBuilder());
+                }
+                int idx = 0, flag = -1;
+                for (char c : s.toCharArray()) {
+                    rows.get(idx).append(c);
+                    //每次到达第1行 或者 最后一行,方向反转
+                    if (idx == 0 || idx == numRows - 1)
+                        flag = -flag;
+                    idx += flag;
+                }
+                StringBuilder sb = new StringBuilder();
+                for (StringBuilder row : rows) {
+                    sb.append(row);
+                }
+                return sb.toString();
+            }
+        }
+    }
 
 
 }
