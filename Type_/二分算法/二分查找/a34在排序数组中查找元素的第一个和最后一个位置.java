@@ -12,7 +12,7 @@ public class a34在排序数组中查找元素的第一个和最后一个位置 
         }
 
 
-        //大于等于target的最小索引
+        //大于等于target的最小索引 - 在有序数组中找到第一个大于等于target的元素索引。
         public int leftBound(int[] nums, int target) {
             int lo = 0, hi = nums.length;
             while (lo < hi) {
@@ -30,11 +30,11 @@ public class a34在排序数组中查找元素的第一个和最后一个位置 
             return lo;
         }
 
-        //小于等于target的最大索引
+        //小于等于target的最大索引 - 在有序数组中找到小于等于目标值 (target) 的最大索引
         public int rightBound(int[] nums, int target) {
             int lo = 0, hi = nums.length;
             while (lo < hi) {
-                int mid = (hi - lo) >> 1 + lo;
+                int mid = ((hi - lo) >> 1) + lo;
                 //[lo, mid) mid (mid + 1,hi)
                 if (nums[mid] <= target)
                     //范围缩小到 [mid+1,hi)
