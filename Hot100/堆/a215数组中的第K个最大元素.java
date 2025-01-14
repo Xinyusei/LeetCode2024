@@ -108,7 +108,7 @@ public class a215数组中的第K个最大元素 {
             int left = lo, right = hi;
             //3 2 1 5 6 4 p = 5
             //4 2 1 3 5 6
-            while (left < right) {
+            while (true) {
                 while (left < right && nums[right] > pivot) right--;
                 while (left < right && nums[left] <= pivot) left++;
                 if (left >= right)
