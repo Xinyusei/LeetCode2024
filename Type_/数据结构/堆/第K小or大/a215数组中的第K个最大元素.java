@@ -1,4 +1,4 @@
-package Type_.数据结构.堆;
+package Type_.数据结构.堆.第K小or大;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
