@@ -1,7 +1,4 @@
-package Type_.动态规划.打家劫舍;
-
-import java.util.HashMap;
-import java.util.HashSet;
+package Type_.动态规划.一入门DP.打家劫舍;
 
 /**
  * 740. 删除并获得点数

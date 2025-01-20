@@ -1,4 +1,4 @@
-package Type_.动态规划.一入门DP.aa.最大子数组_子段和;
+package Type_.动态规划.一入门DP.最大子段和;
 
 /**
  * https://leetcode.cn/problems/maximum-sum-circular-subarray/description/
