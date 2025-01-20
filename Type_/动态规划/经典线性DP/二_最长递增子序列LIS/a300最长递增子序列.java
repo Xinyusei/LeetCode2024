@@ -1,4 +1,4 @@
-package Type_.动态规划.经典线性DP.最长递增子序列LIS;
+package Type_.动态规划.经典线性DP.二_最长递增子序列LIS;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class a300最长递增子序列 {
     /**
-     * 枚举选哪一个的做法
+     * 枚举选哪一个的做法 - DP TABLE - 时间复杂度O(n^2)
      */
     class Solution {
         public int lengthOfLIS(int[] nums) {
@@ -33,7 +33,8 @@ public class a300最长递增子序列 {
     }
 
     /**
-     * 贪心 + 二分查找
+     * 优化 ： 贪心 + 二分查找 时间复杂度0(nlogn)
+     * 核心 ： g[i] 的含义
      */
     class Solution2 {
         class Solution {
