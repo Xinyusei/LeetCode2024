@@ -1,4 +1,4 @@
-package Type_.动态规划.背包问题.零一背包;
+package Type_.动态规划.三_背包问题.一_零一背包;
 
 import java.util.Arrays;
 
