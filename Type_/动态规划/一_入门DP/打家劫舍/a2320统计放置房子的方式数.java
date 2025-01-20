@@ -1,4 +1,4 @@
-package Type_.动态规划.一入门DP.打家劫舍;
+package Type_.动态规划.一_入门DP.打家劫舍;
 
 /**
  * <a href="https://leetcode.cn/problems/count-number-of-ways-to-place-houses/">2320. 统计放置房子的方式数</a>

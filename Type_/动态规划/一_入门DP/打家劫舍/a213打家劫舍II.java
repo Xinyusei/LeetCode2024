@@ -1,4 +1,4 @@
-package Type_.动态规划.一入门DP.打家劫舍;
+package Type_.动态规划.一_入门DP.打家劫舍;
 
 /**
  * 213. 打家劫舍 II

@@ -1,4 +1,4 @@
-package Type_.动态规划.一入门DP.爬楼梯;
+package Type_.动态规划.一_入门DP.爬楼梯;
 
 import java.util.Arrays;
 
