@@ -1,4 +1,4 @@
-package Type_.动态规划.经典线性DP.最长公共子序列LCS;
+package Type_.动态规划.经典线性DP.一_最长公共子序列LCS;
 
 import java.util.Arrays;
 

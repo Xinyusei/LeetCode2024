@@ -1,4 +1,4 @@
-package Type_.动态规划.经典线性DP.最长递增子序列LIS;
+package Type_.动态规划.经典线性DP.二_最长递增子序列LIS;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package Type_.动态规划.经典线性DP.最长公共子序列LCS;
+package Type_.动态规划.经典线性DP.一_最长公共子序列LCS;
 
 public class a712两个字符串的最小ASCII删除和 {
     class Solution {
