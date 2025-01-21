@@ -11,6 +11,7 @@ public class a97交错字符串 {
 
     /**
      * DP TABLE
+     * 定义 f[i][j] 为使用 s1 的前 i 个字符，使用 s2 的前 j 个字符，能否凑出 s3 的前 i+j 个字符。
      */
     class S1_1 {
         class Solution {
@@ -20,23 +21,22 @@ public class a97交错字符串 {
                 if (m + n != t)
                     return false;
                 boolean[][] f = new boolean[m + 1][n + 1];
-                //f[i][j]? 表示以s1[0...i-1],s2[0...j-1]能/否交错构成s3[0...i+j-1]
-
+                // f[i][j] 为使用 s1 的前 i 个字符，使用 s2 的前 j 个字符，能否凑出 s3 的前 i+j 个字符。
                 //base case
                 f[0][0] = true;
+                for (int i = 1; i <= m && f[i - 1][0]; i++)
+                    f[i][0] = s1.charAt(i - 1) == s3.charAt(i - 1);
+                for (int j = 1; j <= n && f[0][j - 1]; j++)
+                    f[0][j] = s2.charAt(j - 1) == s3.charAt(j - 1);
                 //遍历
-                for (int i = 0; i <= m; i++) {
-                    for (int j = 0; j <= n; j++) {
+                for (int i = 1; i <= m; i++) {
+                    for (int j = 1; j <= n; j++) {
                         int k = i + j - 1;
-                        if (i >= 1) {
-                            //隐含了 base case
-                            f[i][j] = f[i][j] || (f[i - 1][j] && s1.charAt(i - 1) == s3.charAt(k));
-                        }
-                        if (j >= 1) {
-                            f[i][j] = f[i][j] || (f[i][j - 1] && s2.charAt(j - 1) == s3.charAt(k));
-                        }
+                        if (s1.charAt(i - 1) == s3.charAt(k))
+                            f[i][j] |= f[i - 1][j];
+                        if (s2.charAt(j - 1) == s3.charAt(k))
+                            f[i][j] |= f[i][j - 1];
                     }
-
                 }
                 return f[m][n];
             }
