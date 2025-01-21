@@ -10,7 +10,7 @@ public class a63不同路径II {
     /**
      * 记忆化搜索 - 从  0，0开始搜索
      */
-    class Solution {
+    class S2_1 {
         int[][] memo;
 
         public int uniquePathsWithObstacles(int[][] obstacleGrid) {
@@ -43,7 +43,7 @@ public class a63不同路径II {
     /**
      * 记忆化搜索 - 分解问题 从终点往回推
      */
-    class Solution2 {
+    class S2_2 {
         int[][] memo;
 
         public int uniquePathsWithObstacles(int[][] obstacleGrid) {
@@ -82,36 +82,73 @@ public class a63不同路径II {
     }
 
     /**
-     * DP
+     * DP TABLE - 从 x，y 到达 右下角(m - 1,n - 1)有多少路径
      */
-    class Solution3 {
-        public int uniquePathsWithObstacles(int[][] s) {
-            int m = s.length, n = s[0].length;
-            if(s[m - 1][n - 1] == 1)
-                return 0;
-            int[][] dp = new int[m][n];
-            boolean rowFlag = false, colFlag = false;
-            for (int i = 0; i < m; i++) {
-                if (s[i][0] == 1)
-                    rowFlag = true;
-                if (!rowFlag)
-                    dp[i][0] = 1;
-            }
-            for (int j = 0; j < n; j++) {
-                if (s[0][j] == 1)
-                    colFlag = true;
-                if (!colFlag)
-                    dp[0][j] = 1;
-            }
-            for (int i = 1; i < m; i++) {
-                for (int j = 1; j < n; j++) {
-                    if (s[i - 1][j] != 1)
-                        dp[i][j] += dp[i - 1][j];
-                    if (s[i][j - 1] != 1)
-                        dp[i][j] += dp[i][j - 1];
+    class S1_1 {
+        class Solution {
+            public int uniquePathsWithObstacles(int[][] g) {
+                int m = g.length, n = g[0].length;
+                int[][] f = new int[m][n];
+
+                //f[i][j] 表示 从 0，0 到达 x,y 有多少路径
+                //base case
+                for (int i = 0, j = 0; j < n; j++) {
+                    if (g[i][j] == 1)
+                        break;
+                    f[i][j] = 1;
                 }
+                for (int i = 0, j = 0; i < m; i++) {
+                    if (g[i][j] == 1)
+                        break;
+                    f[i][j] = 1;
+                }
+
+                for (int i = 1; i < m; i++) {
+                    for (int j = 1; j < n; j++) {
+                        if (g[i][j] == 1) {
+                            f[i][j] = 0;
+                            continue;
+                        }
+                        f[i][j] = f[i - 1][j] + f[i][j - 1];
+                    }
+                }
+                return f[m - 1][n - 1];
             }
-            return dp[m - 1][n - 1];
+        }
+    }
+
+    /**
+     * DP TABLE -  从 x,y 到达 右下角(m-1, n-1) 的路径数目
+     */
+
+    class S1_2 {
+        class Solution {
+            public int uniquePathsWithObstacles(int[][] g) {
+                int m = g.length, n = g[0].length;
+                int[][] f = new int[m][n];
+
+                //f[i][j] 表示 从 x,y 到达 右下角(m-1, n-1) 的路径数目
+                //base case
+                for (int i = m - 1, j = n - 1; j >= 0; j--) {
+                    if (g[i][j] == 1)
+                        break;
+                    f[i][j] = 1;
+                }
+                for (int i = m - 1, j = n - 1; i >= 0; i--) {
+                    if (g[i][j] == 1)
+                        break;
+                    f[i][j] = 1;
+                }
+
+                for (int i = m - 2; i >= 0; i--) {
+                    for (int j = n - 2; j >= 0; j--) {
+                        if (g[i][j] == 1)
+                            continue;
+                        f[i][j] = f[i + 1][j] + f[i][j + 1];
+                    }
+                }
+                return f[0][0];
+            }
         }
     }
 }
