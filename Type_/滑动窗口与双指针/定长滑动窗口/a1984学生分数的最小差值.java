@@ -1,7 +1,6 @@
-package Type_.滑动窗口.定长;
+package Type_.滑动窗口与双指针.定长滑动窗口;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * 1984. 学生分数的最小差值

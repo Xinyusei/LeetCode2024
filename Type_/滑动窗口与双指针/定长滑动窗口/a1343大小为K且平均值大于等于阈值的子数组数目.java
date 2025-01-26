@@ -1,9 +1,4 @@
-package Type_.滑动窗口.定长;
-
-import java.awt.*;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+package Type_.滑动窗口与双指针.定长滑动窗口;
 
 /**
  * 1343. 大小为 K 且平均值大于等于阈值的子数组数目

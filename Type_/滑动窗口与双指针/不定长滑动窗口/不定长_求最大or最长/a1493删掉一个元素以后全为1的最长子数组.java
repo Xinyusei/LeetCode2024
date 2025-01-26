@@ -1,9 +1,4 @@
-package Type_.滑动窗口.不定长_求最大or最长;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+package Type_.滑动窗口与双指针.不定长滑动窗口.不定长_求最大or最长;
 
 /**
  * 1493. 删掉一个元素以后全为 1 的最长子数组

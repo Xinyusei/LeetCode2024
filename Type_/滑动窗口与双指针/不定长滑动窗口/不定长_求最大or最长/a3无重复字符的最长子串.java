@@ -1,4 +1,4 @@
-package Type_.滑动窗口.不定长_求最大or最长;
+package Type_.滑动窗口与双指针.不定长滑动窗口.不定长_求最大or最长;
 
 import java.util.HashMap;
 import java.util.Map;

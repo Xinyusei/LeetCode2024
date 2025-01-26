@@ -1,9 +1,8 @@
-package Type_.滑动窗口.定长;
+package Type_.滑动窗口与双指针.定长滑动窗口;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * 2841. 几乎唯一子数组的最大和

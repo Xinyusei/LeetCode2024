@@ -1,4 +1,4 @@
-package Type_.滑动窗口;
+package Type_.滑动窗口与双指针;
 
 public class a396旋转函数 {
     /**

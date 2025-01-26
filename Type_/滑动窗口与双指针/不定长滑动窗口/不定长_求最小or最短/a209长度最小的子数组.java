@@ -1,4 +1,4 @@
-package Type_.滑动窗口.不定长_求最小or最短;
+package Type_.滑动窗口与双指针.不定长滑动窗口.不定长_求最小or最短;
 
 /**
  * <a href="https://leetcode.cn/problems/minimum-size-subarray-sum/description/">209. 长度最小的子数组</a>

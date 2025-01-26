@@ -1,6 +1,5 @@
-package Type_.滑动窗口.定长;
+package Type_.滑动窗口与双指针.定长滑动窗口;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 

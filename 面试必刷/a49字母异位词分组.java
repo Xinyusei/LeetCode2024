@@ -30,8 +30,7 @@ public class a49字母异位词分组 {
                 }
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < cnt.length; i++) {
-                    if (cnt[i] == 0)
-                        continue;
+                    if (cnt[i] == 0) continue;
                     char ch = (char) (i + 'a');
                     sb.append(("" + ch).repeat(cnt[i]));
                 }
@@ -45,8 +44,59 @@ public class a49字母异位词分组 {
                 }
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < cnt.length; i++) {
-                    if (cnt[i] == 0)
-                        continue;
+                    if (cnt[i] == 0) continue;
+                    char ch = (char) (i + 'a');
+                    sb.append(ch).append(cnt[i]);
+
+                }
+                return sb.toString();
+            }
+        }
+    }
+
+    class S2 {
+        class Solution {
+            public List<List<String>> groupAnagrams(String[] strs) {
+                Map<String, List<String>> record = new HashMap<>();
+                for (String s : strs) {
+                    String converted = convert_v2(s);
+                    record.putIfAbsent(converted, new ArrayList<>());
+                    record.get(converted).add(s);
+                }
+
+                return new ArrayList<>(record.values());
+            }
+
+            private String convert_v3(String word) {
+                int[] cnt = new int[26];
+                for (int i = 0; i < word.length(); i++) {
+                    cnt[word.charAt(i) - 'a']++;
+                }
+                return Arrays.toString(cnt);
+            }
+
+            private String convert_v1(String s) {
+                int[] cnt = new int[26];
+                for (char ch : s.toCharArray()) {
+                    cnt[ch - 'a']++;
+                }
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < cnt.length; i++) {
+                    if (cnt[i] == 0) continue;
+                    char ch = (char) (i + 'a');
+                    sb.append(("" + ch).repeat(cnt[i]));
+                }
+                return sb.toString();
+            }
+
+            private String convert_v2(String s) {
+                int[] cnt = new int[26];
+                for (char ch : s.toCharArray()) {
+                    cnt[ch - 'a']++;
+                }
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < cnt.length; i++) {
+                    if (cnt[i] == 0) continue;
                     char ch = (char) (i + 'a');
                     sb.append(ch).append(cnt[i]);
 
