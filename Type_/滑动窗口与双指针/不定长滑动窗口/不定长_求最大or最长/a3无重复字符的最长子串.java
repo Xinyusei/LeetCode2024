@@ -77,4 +77,31 @@ public class a3无重复字符的最长子串 {
         return ans;
     }
 
+
+    class S1 {
+        class Solution {
+            public int lengthOfLongestSubstring(String s) {
+                int start = 0, end = 0, n = s.length();
+                int res = 0;
+                Map<Character, Integer> record = new HashMap<>();
+                while (end < s.length()) {
+                    char addCh = s.charAt(end);
+                    record.put(addCh, record.getOrDefault(addCh, 0) + 1);
+
+                    while (record.get(addCh) > 1) {
+                        char rmCh = s.charAt(start);
+                        record.put(rmCh, record.get(rmCh) - 1);
+                        if (record.get(rmCh) == 0)
+                            record.remove(rmCh);
+                        start++;
+                    }
+                    res = Math.max(res, end - start + 1);
+                    end++;
+                }
+                return res;
+
+            }
+        }
+    }
+
 }

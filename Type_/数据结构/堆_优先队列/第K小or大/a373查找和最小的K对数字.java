@@ -1,4 +1,4 @@
-package Type_.数据结构.堆.第K小or大;
+package Type_.数据结构.堆_优先队列.第K小or大;
 
 import java.util.ArrayList;
 import java.util.Comparator;

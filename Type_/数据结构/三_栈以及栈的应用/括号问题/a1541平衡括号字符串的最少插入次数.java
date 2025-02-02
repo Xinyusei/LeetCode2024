@@ -1,4 +1,4 @@
-package Type_.数据结构.栈以及栈的应用.括号问题;
+package Type_.数据结构.三_栈以及栈的应用.括号问题;
 
 /**
  * @Author: ZJX

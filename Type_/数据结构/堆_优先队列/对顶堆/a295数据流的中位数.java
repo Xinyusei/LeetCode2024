@@ -1,4 +1,4 @@
-package Type_.数据结构.堆.对顶堆;
+package Type_.数据结构.堆_优先队列.对顶堆;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

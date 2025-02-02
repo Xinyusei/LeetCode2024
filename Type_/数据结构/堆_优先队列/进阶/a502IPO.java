@@ -1,6 +1,5 @@
-package Type_.数据结构.堆.进阶;
+package Type_.数据结构.堆_优先队列.进阶;
 
-import java.io.PipedReader;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
