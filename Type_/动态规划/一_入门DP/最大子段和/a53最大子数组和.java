@@ -15,4 +15,20 @@ public class a53最大子数组和 {
             return ans;
         }
     }
+
+    class S1 {
+        class Solution {
+            public int maxSubArray(int[] nums) {
+                int n = nums.length;
+                int res = Integer.MIN_VALUE;
+
+                for (int i = 1; i < n; i++) {
+                    nums[i] = Math.max(nums[i - 1], 0) + nums[i];
+                    res = Math.max(res, nums[i]);
+                }
+                return res;
+
+            }
+        }
+    }
 }
