@@ -37,6 +37,9 @@ public class a238除自身以外数组的乘积 {
     }
 
 
+    /**
+     * 优化
+     */
     class S2 {
         class Solution {
             public int[] productExceptSelf(int[] nums) {
