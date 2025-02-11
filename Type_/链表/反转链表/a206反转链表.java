@@ -65,4 +65,24 @@ public class a206反转链表 {
             }
         }
     }
+
+    /**
+     * pre 指针
+     */
+
+    class S3 {
+        class Solution {
+            public ListNode revereseList(ListNode head) {
+
+                ListNode pre = null, cur = head;
+                while (cur != null) {
+                    ListNode next = cur.next;
+                    cur.next = pre;
+                    pre = cur;
+                    cur = next;
+                }
+                return pre;
+            }
+        }
+    }
 }
