@@ -6,7 +6,7 @@ package 面试必刷;
  * @Description:
  */
 public class a48旋转图像 {
-    //todo 
+    //todo
     /**
      * 找规律 - 必须掌握
      */
