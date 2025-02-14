@@ -1,4 +1,4 @@
-package Type_.图.网格图.DFS基础;
+package Type_.网格图.网格图.DFS基础;
 
 
 /**

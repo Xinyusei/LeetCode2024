@@ -1,6 +1,5 @@
-package Type_.图;
+package Type_.网格图;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 

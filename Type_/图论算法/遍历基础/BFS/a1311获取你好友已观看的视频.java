@@ -1,4 +1,4 @@
-package Type_.图.图论算法.BFS;
+package Type_.图论算法.遍历基础.BFS;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package Type_.图.网格图.DFS基础;
+package Type_.网格图.网格图.DFS基础;
 
 /**
  * <a href="https://leetcode.cn/problems/battleships-in-a-board/description/?envType=daily-question&envId=2024-07-09">419. 棋盘上的战舰</a>

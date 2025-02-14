@@ -1,4 +1,4 @@
-package Type_.图.图论算法.DFS;
+package Type_.图论算法.遍历基础.DFS;
 
 import java.util.ArrayList;
 import java.util.Arrays;

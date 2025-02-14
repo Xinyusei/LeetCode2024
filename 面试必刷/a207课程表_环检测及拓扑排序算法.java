@@ -18,7 +18,7 @@ public class a207课程表_环检测及拓扑排序算法 {
             //全局判断当前节点是否遍历过，是以图为维度来考虑
             boolean[] visited;
 
-            // 记录一次递归堆栈中的节点，是路径维度
+            // 记录一次 traverse 递归经过的节点
             boolean[] onPath;
             // 记录图中是否有环
             boolean hasCycle = false;
@@ -62,11 +62,13 @@ public class a207课程表_环检测及拓扑排序算法 {
                     // 不用再重复遍历已遍历过的节点
                     return;
                 }
+                // 前序代码位置
                 visited[s] = true;
                 onPath[s] = true;
                 for (Integer next : g[s]) {
                     traverse(g, next);
                 }
+                // 后序代码位置
                 onPath[s] = false;
             }
 
