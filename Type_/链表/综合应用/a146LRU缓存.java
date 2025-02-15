@@ -9,7 +9,7 @@ import java.util.Map;
  * @Description:
  */
 public class a146LRU缓存 {
-    //todo 
+    //todo
     class S1 {
         class LRUCache {
             private static class Node {
