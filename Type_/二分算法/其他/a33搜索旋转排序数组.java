@@ -77,4 +77,42 @@ public class a33搜索旋转排序数组 {
             }
         }
     }
+
+    class S3 {
+        class Solution {
+            public int search(int[] nums, int target) {
+                int lo = 0, hi = nums.length;
+                boolean isUp = target >= nums[0];
+                while (lo < hi) {
+                    int mid = ((hi - lo) >> 1) + lo;
+                    int num = nums[mid];
+                    if (num == target)
+                        return mid;
+                    if (num > target) {
+                        //判断
+                        if (num < nums[0]) //num在下方
+                            hi = mid;
+                        else { //num在上方
+                            if (isUp)
+                                hi = mid;
+                            else
+                                lo = mid + 1;
+                        }
+                    } else { //num < target
+                        if (num >= nums[0]) //num在上方
+                            lo = mid + 1;
+                        else { //num在下方
+                            if (isUp)
+                                hi = mid;
+                            else
+                                lo = mid + 1;
+                        }
+                    }
+                }
+                if (lo == nums.length || nums[lo] != target)
+                    return -1;
+                return lo;
+            }
+        }
+    }
 }
